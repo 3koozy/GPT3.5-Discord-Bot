@@ -40,5 +40,38 @@ async def on_message(message):
 # Replace 'your-gpt-3.5-api-key' with your actual GPT-3.5 API key
 openai.api_key = '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'
 
+# async def fetch_gpt35_response(prompt):
+#     url = 'https://api.openai.com/v1/chat/completions'
+#     headers = {
+#         'Content-Type': 'application/json',
+#         'Authorization': f'Bearer {gpt35_api_key}'
+#     }
+#     data = {
+#         "model": "gpt-3.5-turbo",
+#          "messages": [{"role": "system", "content": "you are a game dev consultant. Help the user to develop games."},
+#                       {"role": "user", "content": prompt}],
+#         'max_tokens': 100,
+#         'temperature': 0.7,
+#         'n': 1,
+#         'stop': None#["\n"]
+#     }
+
+#     async with aiohttp.ClientSession() as session:
+#         async with session.post(url, headers=headers, json=data) as response:
+#             result = await response.json()
+#             print(result)  # Print the entire response to see what's going on
+#             if 'choices' in result and result['choices']:
+#                 return result['choices'][0]['message']['content'].strip()
+#             else:
+#                 return "Error: Could not fetch a response from the GPT-3.5 API. Please check the API key and try again."
+
+# @bot.command(name='ask')
+# async def ask_gpt35(ctx, *, question):
+#     response = await fetch_gpt35_response(question)
+#     await ctx.send(response)
+
 # Replace 'your-discord-bot-token' with your actual Discord bot token
-bot.start('MTA4ODY2NTQ4MzYzODc0MzEwMQ.G4gfHt.sjh_GeL-bts6Vc1p1XPsqOC7uoAxiMidD2dONs') #await 
+async def run_bot():
+  await bot.start('MTA4ODY2NTQ4MzYzODc0MzEwMQ.G4gfHt.sjh_GeL-bts6Vc1p1XPsqOC7uoAxiMidD2dONs')
+
+run_bot()
