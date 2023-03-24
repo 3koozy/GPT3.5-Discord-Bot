@@ -76,4 +76,10 @@ openai.api_key = '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'
 async def run_bot():
   yield bot.start('MTA4ODY2NTQ4MzYzODc0MzEwMQ.G4gfHt.sjh_GeL-bts6Vc1p1XPsqOC7uoAxiMidD2dONs')
 
-await run_bot()
+# Other import statements and your bot's code
+
+async def main():
+    await run_bot()
+
+if __name__ == '__main__':
+    asyncio.run(main())
