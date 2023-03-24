@@ -5,6 +5,7 @@ from discord import Intents
 import aiohttp
 import nest_asyncio
 import openai
+import asyncio
 
 nest_asyncio.apply()
 
@@ -71,6 +72,7 @@ openai.api_key = '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'
 #     await ctx.send(response)
 
 # Replace 'your-discord-bot-token' with your actual Discord bot token
+@asyncio.coroutine
 async def run_bot():
   await bot.start('MTA4ODY2NTQ4MzYzODc0MzEwMQ.G4gfHt.sjh_GeL-bts6Vc1p1XPsqOC7uoAxiMidD2dONs')
 
