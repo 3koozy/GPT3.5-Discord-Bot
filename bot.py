@@ -43,7 +43,7 @@ openai.api_key = os.environ['openai_api_key']
 
 # Replace 'your-discord-bot-token' with your actual Discord bot token
 async def run_bot():
-  yield bot.start(os.environ['discord_api_key'])
+  await bot.start(os.environ['discord_api_key'])
 
 # Other import statements and your bot's code
 
